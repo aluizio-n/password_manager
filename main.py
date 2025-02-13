@@ -2,6 +2,8 @@ from crypto_manager import generate_key, encrypt_password, decrypt_password
 from database_manager import create_db, save_password, get_passwords
 from utils import generate_password
 
+import getpass
+
 def menu():
     print("\nPassword manager - CLI")
     print("1. Add password")
@@ -9,7 +11,7 @@ def menu():
     print("3. Exit")
 
 def main():
-    master_password = input("Type your master password: ")
+    master_password = getpass.getpass("Type your master password: ")
     key = generate_key(master_password)
     create_db()
 
