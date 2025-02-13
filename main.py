@@ -1,6 +1,6 @@
 from crypto_manager import generate_key, encrypt_password, decrypt_password
 from database_manager import create_db, save_password, get_passwords
-from utils import generate_passord
+from utils import generate_password
 
 def menu():
     print("\nPassword manager - CLI")
@@ -23,7 +23,7 @@ def main():
             password = input("Type a password or just hit enter to generate a random password: ")
 
             if not password:
-                password = generate_passord()
+                password = generate_password()
                 print(f"Generated password: {password}")
 
             encrypt_pass = encrypt_password(password, key)
@@ -33,7 +33,7 @@ def main():
         elif option == "2":
             data = get_passwords()
             if not data:
-                print("Nenhuma senha salva.")
+                print("There is no password saved.")
                 return
             print("\nPasswords stored:")
             for _, site, user, encrypt_pass in data:
