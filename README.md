@@ -14,8 +14,8 @@ This is a **secure password manager** built in Python. It allows users to store 
 
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/password-manager.git
-cd password-manager
+git clone https://github.com/aluizio-n/password_manager.git
+cd password_manager
 ```
 
 ### **2️⃣ Create a Virtual Environment (Optional but Recommended)**
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### **4️⃣ Set Up the Environment Variables**
 Create a `.env` file in the project root and add:
 ```
-DB_PATH=senhas.db
+DB_PATH=passwords.db
 ```
 
 ## 📌 Usage
